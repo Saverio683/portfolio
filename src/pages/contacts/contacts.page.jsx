@@ -25,9 +25,15 @@ const Contacts = () => {
             <span className='subtitle'>Reach out to me via email, connect with me, 
             or explore my unique personal content.</span>
             <div className='socials-ct'>
-                <img src='https://i.ibb.co/jrSChg5/7Bj98iE.webp' alt='email' width='65px' height='auto'/>
-                <img src='https://i.ibb.co/hx6xjBt/PeEdSxE.webp' alt='linkedin' width='65px' height='auto' />
-                <img src='https://i.ibb.co/37RLX3S/4AwORQM.webp' alt='github' width='65px' height='auto' />
+                <a href='mailto:saveriorandazzo51@gmail.com' target='_blank' rel='noopener noreferrer'>
+                    <img src='https://i.ibb.co/jrSChg5/7Bj98iE.webp' alt='email' width='65px' height='auto'/>
+                </a>
+                <a href='http://' target='_blank' rel='noopener noreferrer'>
+                    <img src='https://i.ibb.co/hx6xjBt/PeEdSxE.webp' alt='linkedin' width='65px' height='auto' />
+                </a>
+                <a href='https://github.com/Saverio683' target='_blank' rel='noopener noreferrer'>
+                    <img src='https://i.ibb.co/37RLX3S/4AwORQM.webp' alt='github' width='65px' height='auto' />
+                </a>
             </div>
             <form ref={formRef} onSubmit={sendMail}>
                 <span className='title'>Contact</span>
