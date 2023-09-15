@@ -1,0 +1,109 @@
+.contacts-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4.5vw 0;
+
+    .title {
+        text-transform: uppercase;
+        font-size: 50px;
+        font-family: PT Serif, serif;
+    }
+
+    .subtitle {
+        font-size: 30px;
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        max-width: 50%;
+        font-family: PT Serif, serif;
+        color: #b5b5b5;
+    }
+
+    .socials-ct {
+        margin: 20px 0;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        column-gap: 50px;
+
+        img {
+            cursor: pointer;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: #004aad;
+            }
+        }
+    }
+
+    form {
+        margin: 20px 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 40px;
+        width: 25%;
+        margin: 0 auto;
+
+        .title, button {
+            margin-right: auto;
+        }
+
+        .title {
+            margin-bottom: 20px;
+            background-image: none;
+            background-image: linear-gradient(rgba(18, 60, 231, 0) 69%, #006eff 70%, #006eff);
+            text-transform: capitalize;  
+        }
+
+        input, textarea {
+            width: 100%;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 25px;
+            border-bottom: 1px solid #fff;
+            padding: 0 0 5px 10px;
+
+            &:focus {
+                outline: 1px solid #004aad;
+            }
+        }
+
+        textarea {
+            height: 100px;
+            padding-top: 20px;
+            resize: vertical;
+            min-height: 50px;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            font-size: 25px;
+            text-transform: capitalize;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+
+    @media only screen and (max-width: 1250px) {
+        .title {
+            font-size: 30px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+        }
+
+        form {
+            width: 85%;
+        }
+    }
+}
