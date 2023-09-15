@@ -1,6 +1,24 @@
+import emailjs  from 'emailjs-com'
+
 import './contacts.styles.scss'
+import { useRef } from 'react'
 
 const Contacts = () => {
+    const formRef = useRef(null)
+    const sendMail = e => {
+        e.preventDefault()
+        const {  } = process.env
+
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+            .then(() => {
+                alert('Email correctly sent!')
+            }, (err) => {
+                alert('Ops... something went wrong')
+                console.error(err)
+            })
+
+        e.target.reset()
+    }
     return (
         <div className='contacts-page' id='contacts'>
             <span className='title'>Let's Connect</span>
@@ -11,11 +29,11 @@ const Contacts = () => {
                 <img src='https://i.ibb.co/hx6xjBt/PeEdSxE.webp' alt='linkedin' width='65px' height='auto' />
                 <img src='https://i.ibb.co/37RLX3S/4AwORQM.webp' alt='github' width='65px' height='auto' />
             </div>
-            <form>
+            <form ref={formRef} onSubmit={sendMail}>
                 <span className='title'>Contact</span>
-                <input required type='text' placeholder='Name' />
-                <input required type='text' placeholder='Email' />
-                <textarea required type='text' placeholder='Message' />
+                <input required type='text' placeholder='Name' name='from_name' />
+                <input required type='text' placeholder='Email' name='from_email' />
+                <textarea required type='text' placeholder='Message' name='message' />
                 <button type='submit'>send message -{'>'}</button>
             </form>
         </div>
