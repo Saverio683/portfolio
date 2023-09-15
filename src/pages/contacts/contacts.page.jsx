@@ -3,12 +3,15 @@ import emailjs  from 'emailjs-com'
 import './contacts.styles.scss'
 import { useRef } from 'react'
 
+const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } = process.env
+
 const Contacts = () => {
     const formRef = useRef(null)
+    console.log(process.env.EMAILJS_SERVICE_ID)
+    console.log(process.env.EMAILJS_TEMPLATE_ID)
+    console.log(process.env.EMAILJS_USER_ID)
     const sendMail = e => {
         e.preventDefault()
-        const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } = process.env
-
         emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, e.target, EMAILJS_USER_ID)
             .then(() => {
                 alert('Email correctly sent!')
