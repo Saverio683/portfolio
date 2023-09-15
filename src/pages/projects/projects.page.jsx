@@ -34,63 +34,46 @@ const projects = [
 ]
 
 const Projects = () => {
+    const Wrapper = ({p}) => (
+        <div className='wrapper'>
+            <span className='definition'>{p.def}</span>
+            <span className='title'>{p.title}</span>
+            <span className='desc'>{p.desc}</span>
+            <div className='tags-ct'>
+            {
+                p.tags.map(t => (
+                    <span className='tag' key={t}>{t}</span>
+                ))
+            }
+            </div>
+            <button>see more</button>
+        </div>  
+    )
+    const Image = ({p}) => (
+        <img 
+            src={p.imgUrl} 
+            alt='project' 
+            width='50%'
+            height='800px'
+        />
+    )
     return (
         <div className='projects-page' id='projects'>
             <div className='title'>personal projects</div>
             <div className='projects-ct'>
             {
                 projects.map((p, i) => (
-                    <div className='project'>
+                    <div className='project' key={p.title}>
                     {
                         (window.screen.width < 1250 || i %2 !== 0) ? (
                             <Fragment>
-                                <div className='wrapper'>
-                                    <span className='definition'>{p.def}</span>
-                                    <span className='title'>{p.title}</span>
-                                    <span className='desc'>{p.desc}</span>
-                                    <div className='tags-ct'>
-                                    {
-                                        p.tags.map(t => (
-                                            <span className='tag'>{t}</span>
-                                        ))
-                                    }
-                                    </div>
-                                    <button>see more</button>
-                                </div>                                
-                                <img 
-                                    src={p.imgUrl} 
-                                    alt='project' 
-                                    width='50%'
-                                    height='800px'
-                                />
+                                <Wrapper p={p} />                                
+                                <Image p={p} />
                             </Fragment>
                         ) : (
-                            <Fragment>
-                                <img 
-                                    src={p.imgUrl} 
-                                    alt='project' 
-                                    width='50%'
-                                    height='800px'
-                                />
-                                <div className='wrapper'>
-                                    <span className='definition'>{p.def}</span>
-                                    <span className='title'>{p.title}</span>
-                                    <span className='desc'>{p.desc}</span>
-                                    <div className='tags-ct'>
-                                    {
-                                        p.tags.map(t => (
-                                            <span className='tag'>{t}</span>
-                                        ))
-                                    }
-                                    </div>
-                                    <a 
-                                        href={p.link}
-                                        target='_blank' 
-                                        rel='noopener noreferrer'
-                                    >
-                                        <button>see more</button>
-                                    </a>
-                                </div>
+                            <Fragment>                               
+                                <Image p={p} />
+                                <Wrapper p={p} /> 
                             </Fragment>
                         )
                     }

@@ -50,14 +50,14 @@ const About = () => {
             <div className='images-ct'>
                 {
                     abouts.map(a => (
-                    <div className='image'>
+                    <div className='image' key={a.title}>
                         <div className='bg-image' style={{ backgroundImage: `url(${a.url})` }} />
                         <div className='desc-ct'>
                             <span className='desc-title'>{a.title}</span>
                             <div className='wrapper'>
                             {
                                 a.text.map(t => (
-                                    <span className='desc'>{t}</span>
+                                    <span className='desc' key={t}>{t}</span>
                                 ))
                             }
                             </div>
