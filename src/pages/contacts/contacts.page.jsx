@@ -7,9 +7,9 @@ const Contacts = () => {
     const formRef = useRef(null)
     const sendMail = e => {
         e.preventDefault()
-        const {  } = process.env
+        const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } = process.env
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, e.target, EMAILJS_PUBLIC_KEY)
             .then(() => {
                 alert('Email correctly sent!')
             }, (err) => {
