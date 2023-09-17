@@ -12,7 +12,7 @@ const Home = () => {
 
     useEffect(() => {
         const typed = new Typed(spanRef.current, {
-            strings: ["Hi, I’m Saverio Randazzo", 'Entepreneur', 'Software Engineer'],
+            strings: ["Hi, I’m Saverio Randazzo", 'Entrepreneur', 'Software Engineer'],
             typeSpeed: 50,
             backSpeed: 40,
             showCursor: false,
