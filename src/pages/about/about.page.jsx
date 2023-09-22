@@ -6,7 +6,7 @@ const abouts = [
         title: 'education',
         text: [
             'Graduated with honors from a technical institute specializing in computer science and telecommunications.',
-            `From October 2023 enrolled in a Bachelor's degree program in computer science and mathematics at 
+            `From October 2023 enrolled in a Bachelor's degree program in Artificial Intelligence at 
             the University of Palermo`
         ]
     },

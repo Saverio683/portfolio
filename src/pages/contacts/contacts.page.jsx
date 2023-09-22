@@ -28,7 +28,7 @@ const Contacts = () => {
                 <a href='mailto:saveriorandazzo51@gmail.com' target='_blank' rel='noopener noreferrer'>
                     <img src='https://i.ibb.co/jrSChg5/7Bj98iE.webp' alt='email' width='65px' height='auto'/>
                 </a>
-                <a href='http://' target='_blank' rel='noopener noreferrer'>
+                <a href='https://www.linkedin.com/in/saverio-randazzo-289993291/' target='_blank' rel='noopener noreferrer'>
                     <img src='https://i.ibb.co/hx6xjBt/PeEdSxE.webp' alt='linkedin' width='65px' height='auto' />
                 </a>
                 <a href='https://github.com/Saverio683' target='_blank' rel='noopener noreferrer'>
