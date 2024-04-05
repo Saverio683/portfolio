@@ -36,7 +36,7 @@ const About = () => {
                 <div className='img-ct'>
                     <div className='circle'>
                         <img 
-                            src='https://i.ibb.co/bW5wrcB/profile.webp' 
+                            src='https://i.ibb.co/KV7cdSY/pic.webp' 
                             alt='profile' 
                         />
                     </div>
